@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>YoungH</title>
+    <link rel="stylesheet" href="/assets/style/bootstrap/css/bootstrap.min.css">
+    <style>
+
+        #title { margin-top: 100px; }
+
+        .table-responsive { margin-top: 100px; }
+        .alert-info { margin-top: 100px; }
+        #form_bottom { margin-bottom: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 id="title">YoungH Forever!</h1>
+        
+        <div class="alert alert-info" role="alert"> 매너있는 글 작성이 사람을 만듭니다. </div>
+
+        <p class="mg_top"></p>
+
+        <form action="/bbs/write" method="POST" id="form_bottom">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title"> <input type="text" class="form-control" placeholder="title" name="title"></h3>
+                </div>
+
+                <div class="panel-body">
+
+                    <table cellspacing="0" cellpadding="0" class="table table-striped">
+
+                        <thead class="pull-right">
+
+                        <tr>
+                            <th scope="col">
+                                <!--<input type="text" name="name" class="form-control text-center" placeholder="name">-->
+                            </th>
+                        </tr>
+
+                        </thead>
+
+                    </table>
+
+                    <textarea name="content" name="content" rows="3" style="width: 100%; margin: 0px; height: 268px;"></textarea>
+
+                </div>
+
+            </div>
+
+            <div class="pull-right">
+                <button type="submit" class="btn btn-success">submit</button>
+                <a href="/bbs/list" class="btn btn-danger">cancel</a>
+            </div>
+
+        </form>
+         
+    </div>
+</body>
+</html>

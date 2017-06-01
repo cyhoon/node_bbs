@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>YoungH</title>
+    <link rel="stylesheet" href="/assets/style/bootstrap/css/bootstrap.min.css">
+    <style>
+
+        #title { margin-top: 100px; }
+
+        .table-responsive { margin-top: 100px; }
+        .panel-default { margin-top: 100px; margin-bottom: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <h1 id="title">YoungH Forever!</h1>
+        
+        <div class="panel panel-default">
+
+        <div class="panel-heading">
+            <h3 class="panel-title"> <%= rows[0].title %>  </h3>
+        </div>
+
+        <div class="panel-body">
+
+                <table cellspacing="0" cellpadding="0" class="table table-striped">
+
+                    <thead class="pull-right">
+
+                        <tr>
+                            <th scope="col">이름 : <%= rows[0].user_id %></th>
+                            <th scope="col">조회수 : <%= rows[0].views %></th>
+                            <th scope="col">등록일 : <%= rows[0].write_date %></th>
+                        </tr>
+
+                    </thead>
+
+                </table>
+
+                <p> <%= rows[0].content %> </p>
+
+            </div>
+        </div>
+         
+        
+        <div class="btn-group pull-right" role="group">
+            <a href="/bbs/list"><button type="button" class="btn btn-primary">list</button></a>
+            <a href="/bbs/write"><button type="button" class="btn btn-success">write</button></a>
+            <a href="/bbs/modify?bid=<%= rows[0].b_id %>"><button type="button" class="btn btn-warning">modify</button></a>
+            <a href="/bbs/delete?bid=<%= rows[0].b_id %>"><button type="button" class="btn btn-danger">delete</button></a>
+        </div>
+
+    </div>
+</body>
+</html>
